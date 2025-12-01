@@ -1,11 +1,13 @@
-import pool from "@/lib/db"
+import pool from "../../../lib/db"
+
+
 
 export async function POST(req) {
   try {
     const { name, email, message } = await req.json()
 
     await pool.query(
-      "INSERT INTO contacts (name, email, message) VALUES ($1, $2, $3)",
+      "INSERT INTO contact (name, email, message) VALUES ($1, $2, $3)",
       [name, email, message]
     )
 
