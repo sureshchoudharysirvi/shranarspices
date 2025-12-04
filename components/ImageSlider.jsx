@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 
 const slides = [
   { id: 1, src: "/images/slider1.png", title: "Pure & Natural", subtitle: "Directly from farms, 100% safe", },
-  { id: 2, src: "/images/farm.jpg", title: "Lab Tested", subtitle: "Quality you can trust", },
+  { id: 2, src: "/images/slider4.jpg", title: "Lab Tested", subtitle: "Quality you can trust", },
   { id: 3, src: "/images/slider3.png", title: "Bulk Supply", subtitle: "On-time delivery for businesses", },
 ];
 
