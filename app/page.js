@@ -25,9 +25,9 @@ export default function Home() {
       <ImageSlider />
 
       {/* Brand Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      {/* <section className="max-w-7xl mx-auto px-4 py-16">
         <BrandSection />
-      </section>
+      </section> */}
 
       {/* Reputation */}
       <section className="max-w-7xl mx-auto px-4 py-16 bg-orange-50 rounded-2xl">
@@ -35,7 +35,7 @@ export default function Home() {
       </section>
 
       {/* ✅ Certifications (NEW) */}
-      <Certifications />
+      {/* <Certifications /> */}
 
       {/* Testimonials (optional) */}
       {/* 
