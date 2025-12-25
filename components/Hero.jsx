@@ -1,43 +1,101 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import { useEffect, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
+
+const texts = [
+  {
+    title: "Pure, Aromatic & Premium Indian Spices",
+    desc: "Trusted by wholesalers, distributors and spice businesses worldwide.",
+  },
+{
+  title: "Custom Branding for Your Company",
+  desc: "Private label spice packaging tailored to your brand identity, market, and customers.",
+}
+,
+  {
+    title: "From Indian Farms to Global Markets",
+    desc: "Delivering authentic flavors with modern packaging and logistics.",
+  },
+]
 
 export default function Hero() {
+  const [index, setIndex] = useState(0)
+
+  // 🔁 CHANGE TEXT EVERY 3 SECONDS
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % texts.length)
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section className="relative w-full h-[500px] md:h-[650px] lg:h-[700px] overflow-hidden">
+    <section className="relative w-full overflow-hidden">
 
-      {/* Video Background (No Sound) */}
+      {/* VIDEO BACKGROUND */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/videos/masala.mp4"
         autoPlay
-        loop
         muted
+        loop
         playsInline
-      ></video>
+        className="
+          absolute inset-0 w-full 
+          h-[70vh] md:h-[85vh] 
+          object-cover
+        "
+      >
+        <source src="/videos/masala.mp4" type="video/mp4" />
+      </video>
 
-      {/* Dark overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black/35"></div>
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
 
-      {/* Content Box */}
-      <div className="relative max-w-6xl mx-auto px-6 h-full flex flex-col justify-center items-start text-left">
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 
+        h-[70vh] md:h-[85vh] 
+        flex items-center"
+      >
+        <div className="max-w-2xl text-white">
 
-        <h1 className="text-4xl md:text-6xl font-bold text-white tracking-wide drop-shadow-md">
-          Pure, Aromatic & Premium Indian Spices
-        </h1>
+          {/* ANIMATED TEXT */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+                {texts[index].title}
+              </h1>
 
-        <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-xl opacity-95">
-          Trusted by wholesalers, distributors and spice businesses worldwide.
-        </p>
+              <p className="mt-5 text-base md:text-lg text-gray-200">
+                {texts[index].desc}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
-        {/* Call to Action Button */}
-        <Link href="/products">
-          <button className="mt-6 px-7 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium text-lg rounded-lg transition-all shadow-md">
-            Explore Our Range
-          </button>
-        </Link>
-
+          {/* BUTTON */}
+          <div className="mt-8">
+            <Link
+              href="/products"
+              className="inline-block bg-orange-500 hover:bg-orange-600 
+              px-8 py-4 rounded-full font-semibold transition shadow-lg"
+            >
+              Explore Our Range
+            </Link>
+          </div>
+        </div>
       </div>
+
+      {/* BOTTOM FADE */}
+      {/* OVERLAY (lighter & premium) */}
+<div className="absolute inset-0 bg-black/40" />
+
     </section>
-  );
+  )
 }

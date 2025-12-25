@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -11,6 +11,12 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [desktopProductOpen, setDesktopProductOpen] = useState(false)
   const [mobileProductOpen, setMobileProductOpen] = useState(false)
+
+  // ✅ AUTO-CLOSE MOBILE MENU ON PAGE CHANGE
+  useEffect(() => {
+    setMobileMenu(false)
+    setMobileProductOpen(false)
+  }, [pathname])
 
   const navItem = (path) =>
     `relative font-bold transition
@@ -84,6 +90,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-3xl text-orange-700"
           onClick={() => setMobileMenu(!mobileMenu)}
+          aria-label="Toggle menu"
         >
           {mobileMenu ? "✕" : "☰"}
         </button>
@@ -100,7 +107,7 @@ export default function Navbar() {
             className="md:hidden bg-white border-t px-6 py-4 overflow-hidden"
           >
             <div className="flex flex-col gap-4 font-semibold">
-              <Link href="/" onClick={() => setMobileMenu(false)}>Home</Link>
+              <Link href="/">Home</Link>
 
               {/* MOBILE PRODUCTS */}
               <button
