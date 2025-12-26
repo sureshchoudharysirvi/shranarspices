@@ -1,137 +1,133 @@
-import { Instagram, Facebook, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+"use client"
+
+import {
+  Instagram,
+  Facebook,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react"
 
 export default function Footer() {
   return (
-    
-    <footer className="bg-[#27272a] text-[#e8e8e8] mt-20 relative">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <footer className="bg-[#27272a] text-[#e8e8e8] mt-16">
 
-        {/* TOP SECTION GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-sm">
+      {/* MAIN CONTAINER */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
+
+        {/* BRAND + CONTACT STRIP */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-b border-white/10 pb-6">
+
+          {/* BRAND */}
+          <div>
+            <h2 className="text-2xl font-extrabold text-white tracking-wide">
+              SHRANAR SPICES
+            </h2>
+            <p className="text-sm opacity-70 mt-1 max-w-sm">
+              Premium Indian spices with trusted quality, packaging and delivery.
+            </p>
+          </div>
+
+          {/* QUICK CONTACT */}
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex items-center gap-2">
+              <Phone size={18} className="text-green-400" />
+              <span className="font-semibold text-white">
+                +91 8928329091
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={18} className="text-green-400" />
+              <span className="font-semibold text-white">
+                shranarspice.com
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        {/* LINK GRID */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm mt-8">
 
           {/* QUICK LINKS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">QUICK LINKS</h3>
-            <ul className="space-y-2">
-              <li className="hover:text-green-400 transition">Home</li>
-              <li className="hover:text-green-400 transition">About Us</li>
-              <li className="hover:text-green-400 transition">Sustainable Farming</li>
-              <li className="hover:text-green-400 transition">Contact Us</li>
+            <h3 className="font-semibold text-white mb-3">Quick Links</h3>
+            <ul className="space-y-2 opacity-80">
+              <li className="hover:text-green-400 cursor-pointer">Home</li>
+              <li className="hover:text-green-400 cursor-pointer">About Us</li>
+              <li className="hover:text-green-400 cursor-pointer">Contact Us</li>
             </ul>
           </div>
 
-          {/* CERTIFICATES */}
+          {/* CERTIFICATIONS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">CERTIFICATES</h3>
-            <ul className="space-y-2">
-              <li className="hover:text-green-400 transition">Agmark</li>
-              <li className="hover:text-green-400 transition">ISO Certified</li>
-              <li className="hover:text-green-400 transition">FSSAI Approved</li>
-            </ul>
-          </div>
-
-          {/* ABOUT */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">ABOUT</h3>
-            <ul className="space-y-2">
-              <li className="hover:text-green-400 transition">Company Overview</li>
-              <li className="hover:text-green-400 transition">Our Team</li>
-              <li className="hover:text-green-400 transition">Careers</li>
+            <h3 className="font-semibold text-white mb-3">Certifications</h3>
+            <ul className="space-y-2 opacity-80">
+              <li>Agmark</li>
+              <li>ISO Certified</li>
+              <li>FSSAI Approved</li>
             </ul>
           </div>
 
           {/* PRODUCTS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">PRODUCTS</h3>
-            <ul className="space-y-2">
-              <li className="hover:text-green-400 transition">Whole Spices</li>
-              <li className="hover:text-green-400 transition">Masala Blends</li>
-              <li className="hover:text-green-400 transition">Premium Herbs</li>
-              <li className="hover:text-green-400 transition">Private Labeling</li>
-            </ul>
-          </div>
-
-          {/* REGISTERED OFFICE */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">REGISTERED OFFICE</h3>
+            <h3 className="font-semibold text-white mb-3">Products</h3>
             <ul className="space-y-2 opacity-80">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-green-400 mt-1"/>
-               <span className="opacity-80">
-  <br/>
-  Churchgate, Mumbai,<br/>
-  India 400 020
-</span>
-
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-green-400"/>
-                <span>+91 22-3505-4100</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-green-400"/>
-                <span>marketing@swanispice.com</span>
-              </li>
+              <li>Whole Spices</li>
+              <li>Masala Blends</li>
+              <li>Private Labeling</li>
             </ul>
           </div>
 
-        </div>
+          {/* ABOUT */}
+          <div>
+            <h3 className="font-semibold text-white mb-3">About</h3>
+            <ul className="space-y-2 opacity-80">
+              <li>Company Overview</li>
+              <li>Our Team</li>
+              <li>Careers</li>
+            </ul>
+          </div>
 
-        {/* MIDDLE CONTACT SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-center md:text-left">
-
-          {/* CALL US */}
-          <div className="flex items-center justify-center md:justify-start gap-2">
-            <Phone size={20} className="text-green-400"/>
-            <div>
-              <p className="text-xs opacity-70">Call Us</p>
-              <p className="text-xl font-bold text-white">+91 22-3505-4100</p>
+          {/* OFFICE */}
+          <div>
+            <h3 className="font-semibold text-white mb-3">Registered Office</h3>
+            <div className="space-y-2 text-sm opacity-80">
+              <div className="flex items-start gap-2">
+                <MapPin size={16} className="text-green-400 mt-1" />
+                <span>
+                  Churchgate, Mumbai <br />
+                  Maharashtra – 400020
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* EMAIL US */}
-          <div className="flex items-center justify-center md:justify-start gap-2">
-            <Mail size={20} className="text-green-400"/>
-            <div>
-              <p className="text-xs opacity-70">Email Us</p>
-              <p className="text-xl font-bold text-white">marketing@swanispice.com</p>
-            </div>
-          </div>
-
         </div>
 
-        {/* BOTTOM SEPARATOR */}
-        <div className="w-full h-px bg-white mt-10 opacity-20"></div>
+        {/* BOTTOM BAR */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 pt-6 border-t border-white/10 text-xs opacity-70">
 
-        {/* COPYRIGHT & LEGAL LINKS */}
-        <div className="md:flex justify-between items-center mt-6 text-xs opacity-70">
+          <p>© 2025 Shranar Spices. All Rights Reserved.</p>
 
-          <p>© 2025 All Rights Reserved.</p>
-
-          <div className="flex flex-wrap gap-4 justify-center md:justify-end mt-4 md:mt-0">
-            <a className="hover:text-green-400 transition">Enquiry</a>
-            <a className="hover:text-green-400 transition">Disclaimer</a>
-            <a className="hover:text-green-400 transition">Terms & Conditions</a>
-            <a className="hover:text-green-400 transition">Privacy Policy</a>
-            <a className="hover:text-green-400 transition">Sitemap</a>
+          <div className="flex flex-wrap gap-4">
+            <span className="hover:text-green-400 cursor-pointer">Enquiry</span>
+            <span className="hover:text-green-400 cursor-pointer">Disclaimer</span>
+            <span className="hover:text-green-400 cursor-pointer">Terms</span>
+            <span className="hover:text-green-400 cursor-pointer">Privacy</span>
           </div>
 
-        </div>
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-4">
+            <Instagram size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
+            <Facebook size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
+            <MessageCircle size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
+          </div>
 
-        {/* SOCIAL ICON SECTION */}
-        <div className="flex gap-4 mt-8 justify-center md:justify-start">
-          <a href="#" target="_blank">
-            <Instagram size={22} className="text-green-400 hover:scale-110 transition"/>
-          </a>
-          <a href="#" target="_blank">
-            <Facebook size={22} className="text-green-400 hover:scale-110 transition"/>
-          </a>
-          <a href="#" target="_blank">
-            <MessageCircle size={22} className="text-green-400 hover:scale-110 transition"/>
-          </a>
         </div>
 
       </div>
     </footer>
-  );
+  )
 }

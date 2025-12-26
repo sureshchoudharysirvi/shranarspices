@@ -13,16 +13,7 @@ export default function Home() {
       <Hero />
 
       {/* Tagline */}
-      <section className="text-center mt-12">
-        <h3 className="text-xl font-bold text-[#6B3F32]">
-          Fresh Spices for Every Business Need
-        </h3>
-        <p className="text-gray-500 mt-2 text-sm">
-          Premium flavor packed with trust.
-        </p>
-      </section>
-
-      <ImageSlider />
+     
 
       {/* Brand Section */}
       {/* <section className="max-w-7xl mx-auto px-4 py-16">
@@ -33,6 +24,24 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 py-16 bg-orange-50 rounded-2xl">
         <ReputationSection />
       </section>
+<section className="relative mt-16 pb-16 bg-[#FFF8E7]">
+
+  {/* HEADING */}
+  <div className="text-center mb-10 px-4">
+    <h3 className="text-2xl md:text-3xl font-extrabold text-[#6B3F32]">
+      Fresh Spices for Every Business Need
+    </h3>
+    <p className="mt-3 text-gray-600 text-sm md:text-base">
+      Premium flavor packed with trust.
+    </p>
+  </div>
+
+  {/* SLIDER (CONNECTED LOOK) */}
+  <div className="relative -mt-6">
+    <ImageSlider />
+  </div>
+
+</section>
 
       {/* ✅ Certifications (NEW) */}
       {/* <Certifications /> */}

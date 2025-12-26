@@ -1,25 +1,72 @@
-"use client";
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
+import { motion } from "framer-motion"
+
+// Animation variants
+const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+}
 
 export default function ReputationSection() {
   return (
-    <section className="max-w-6xl mx-auto px-4">
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-[#5A382F] text-center">
-        Why Choose Shranar Spices?
-      </h2>
-      <p className="text-center text-sm sm:text-base text-gray-600 mt-2">
-        The trusted choice for pure, tested, and scalable spice solutions for businesses.
-      </p>
+    <section className="max-w-6xl mx-auto px-4 py-6">
 
-      {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+      {/* HEADING */}
+      <motion.h2
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-2xl sm:text-3xl font-extrabold text-[#5A382F] text-center"
+      >
+        Why Choose Shranar Spices?
+      </motion.h2>
+
+      <motion.p
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="text-center text-sm sm:text-base text-gray-600 mt-2 max-w-2xl mx-auto"
+      >
+        The trusted choice for pure, tested, and scalable spice solutions for businesses.
+      </motion.p>
+
+      {/* CARDS GRID */}
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12"
+      >
 
         {/* Card 1 */}
-        <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4">
+        <motion.div
+          variants={fadeUpVariant}
+          whileHover={{ y: -8 }}
+          className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4"
+        >
           <div className="relative w-full h-[150px] sm:h-[170px] md:h-[190px] lg:h-[215px] overflow-hidden rounded-xl">
             <Image
               src="/images/natural.png"
-              alt="Pure & Natural"
+              alt="Pure & Natural Spices"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
               sizes="(max-width: 640px) 100vw, 33vw"
@@ -29,16 +76,20 @@ export default function ReputationSection() {
             Pure & Natural
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mt-2 text-center">
-            We deliver spices sourced directly from farmers and processed with zero artificial colors.
+            Spices sourced directly from farmers and processed with zero artificial colors.
           </p>
-        </div>
+        </motion.div>
 
         {/* Card 2 */}
-        <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4">
+        <motion.div
+          variants={fadeUpVariant}
+          whileHover={{ y: -8 }}
+          className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4"
+        >
           <div className="relative w-full h-[150px] sm:h-[170px] md:h-[190px] lg:h-[215px] overflow-hidden rounded-xl">
             <Image
               src="/images/labm.png"
-              alt="Lab Tested"
+              alt="Lab Tested Spices"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
               sizes="(max-width: 640px) 100vw, 33vw"
@@ -48,16 +99,20 @@ export default function ReputationSection() {
             Lab Tested
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mt-2 text-center">
-            Every batch undergoes strict lab testing ensuring reliability for B2B clients.
+            Every batch is lab tested to meet strict quality standards for B2B clients.
           </p>
-        </div>
+        </motion.div>
 
         {/* Card 3 */}
-        <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4">
+        <motion.div
+          variants={fadeUpVariant}
+          whileHover={{ y: -8 }}
+          className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-4"
+        >
           <div className="relative w-full h-[150px] sm:h-[170px] md:h-[190px] lg:h-[215px] overflow-hidden rounded-xl">
             <Image
               src="/images/bulk.png"
-              alt="Bulk Supply"
+              alt="Bulk Spice Supply"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
               sizes="(max-width: 640px) 100vw, 33vw"
@@ -67,11 +122,11 @@ export default function ReputationSection() {
             Bulk Supply
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mt-2 text-center">
-            Ready bulk stock, private labelling & on-time delivery for businesses.
+            Ready bulk stock, private labeling, and reliable on-time delivery.
           </p>
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
     </section>
-  );
+  )
 }
