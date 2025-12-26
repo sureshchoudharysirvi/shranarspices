@@ -36,19 +36,17 @@ export default function Hero() {
     <section className="relative w-full overflow-hidden">
 
       {/* VIDEO BACKGROUND */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="
-          absolute inset-0 w-full 
-          h-[70vh] md:h-[85vh] 
-          object-cover
-        "
-      >
-        <source src="/videos/masala.mp4" type="video/mp4" />
-      </video>
+     <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  className="absolute inset-0 w-full h-[70vh] md:h-[85vh] object-contain md:object-cover"
+>
+  <source src="/videos/masala.mp4" type="video/mp4" />
+</video>
+
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />

@@ -27,10 +27,10 @@ export default function PackagingShipmentClient() {
     <section className="bg-[#FFF8E7]">
 
       {/* HERO */}
-      <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-600 text-white py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold">
+      <div className="py-5 text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold">
           Packaging & Shipment
-        </h1>
+        </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg">
           Safe, hygienic and export-ready spice packaging with reliable delivery
         </p>
@@ -159,3 +159,4 @@ export default function PackagingShipmentClient() {
     </section>
   )
 }
+
