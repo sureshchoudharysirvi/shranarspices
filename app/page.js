@@ -5,7 +5,7 @@ import TestimonialSlider from "../components/TestimonialSlider.jsx";
 import BlogSection from "../components/BlogSection";
 import ImageSlider from "@/components/ImageSlider";
 import Certifications from "@/components/Certifications";
-
+import OurProducts from "@/components/OurProducts"
 export default function Home() {
   return (
     <>
@@ -14,20 +14,20 @@ export default function Home() {
 
       {/* Tagline */}
      
-
+ <OurProducts />
       {/* Brand Section */}
       {/* <section className="max-w-7xl mx-auto px-4 py-16">
         <BrandSection />
       </section> */}
 
       {/* Reputation */}
-      <section className="max-w-7xl mx-auto px-4 py-16 bg-orange-50 rounded-2xl">
+      <section className="max-w-7xl mx-auto px-4 py-6 pb-4 bg-orange-50 rounded-2xl">
         <ReputationSection />
       </section>
-<section className="relative mt-16 pb-16 bg-[#FFF8E7]">
+<section className="relative mt-4 pb-4 bg-[#FFF8E7]">
 
   {/* HEADING */}
-  <div className="text-center mb-10 px-4">
+  <div className="text-center mb-4 px-1">
     <h3 className="text-2xl md:text-3xl font-extrabold text-[#6B3F32]">
       Fresh Spices for Every Business Need
     </h3>
@@ -37,7 +37,7 @@ export default function Home() {
   </div>
 
   {/* SLIDER (CONNECTED LOOK) */}
-  <div className="relative -mt-6">
+  <div className="relative -mt-2 ">
     <ImageSlider />
   </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
       */}
 
       {/* Blogs */}
-      <section className="max-w-7xl mx-auto px-4 py-16 bg-[#FFF8E7]">
+      <section className="max-w-7xl mx-auto px-4 py-6 bg-[#FFF8E7]">
         <BlogSection />
       </section>
     </>

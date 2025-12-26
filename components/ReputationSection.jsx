@@ -24,7 +24,7 @@ const fadeUpVariant = {
 
 export default function ReputationSection() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-6">
+    <section className="max-w-6xl mx-auto px-4 py-6 pb-4">
 
       {/* HEADING */}
       <motion.h2

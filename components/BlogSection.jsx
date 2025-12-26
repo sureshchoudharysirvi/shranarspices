@@ -51,7 +51,7 @@ const fadeUpVariant = {
 
 export default function BlogSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="max-w-7xl mx-auto px-2 py-2">
 
       {/* SECTION TITLE */}
       <motion.h2
