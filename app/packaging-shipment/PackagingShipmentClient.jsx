@@ -95,7 +95,7 @@ export default function PackagingShipmentClient() {
           </motion.div>
 
           <motion.div variants={imageZoom} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white p-4 rounded-3xl shadow-xl max-w-md mx-auto">
-            <Image src="/packaging/reatail packing.png" alt="Retail spice packaging with branding" width={600} height={400} className="rounded-2xl object-cover aspect-[4/3] hover:scale-105 transition" />
+            <Image src="/packaging/reatailpacking.png" alt="Retail spice packaging with branding" width={600} height={400} className="rounded-2xl object-cover aspect-[4/3] hover:scale-105 transition" />
           </motion.div>
         </div>
 

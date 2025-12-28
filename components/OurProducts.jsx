@@ -10,19 +10,19 @@ const products = [
     id: 1,
     title: "Whole Spices",
     desc: "Premium quality whole spices sourced directly from Indian farms.",
-    image: "/images/products/whole-spices.jpg",
+    image: "/images/products/wholespice.jpg",
   },
   {
     id: 2,
     title: "Blended Spices",
     desc: "Authentic blended spices crafted for consistent taste and aroma.",
-    image: "/images/products/masala-blends.jpg",
+    image: "/images/products/spice blend.jpg",
   },
   {
     id: 3,
     title: "Dehydrated Masala",
     desc: "Carefully dehydrated masala products with long shelf life and rich flavor.",
-    image: "/images/products/dehydrated-masala.jpg",
+    image: "/images/products/dehydratedspice.jpg",
   },
 ]
 
