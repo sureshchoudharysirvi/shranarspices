@@ -16,7 +16,7 @@ const products = [
     id: 2,
     title: "Blended Spices",
     desc: "Authentic blended spices crafted for consistent taste and aroma.",
-    image: "/images/products/spice blend.jpg",
+    image: "/images/products/Spice blend.jpg",
   },
   {
     id: 3,
