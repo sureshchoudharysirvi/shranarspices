@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import {
   Instagram,
   Facebook,
@@ -12,8 +13,6 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-[#27272a] text-[#e8e8e8] mt-16">
-
-      {/* MAIN CONTAINER */}
       <div className="max-w-7xl mx-auto px-6 py-10">
 
         {/* BRAND + CONTACT STRIP */}
@@ -31,20 +30,26 @@ export default function Footer() {
 
           {/* QUICK CONTACT */}
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-center gap-2">
+            <a
+              href="tel:+918928329091"
+              className="flex items-center gap-2 hover:text-green-400 transition"
+            >
               <Phone size={18} className="text-green-400" />
               <span className="font-semibold text-white">
-                +91 8928329091
+                +91 89283 29091
               </span>
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+
+            <a
+              href="mailto:info@shranarspices.com"
+              className="flex items-center gap-2 hover:text-green-400 transition"
+            >
               <Mail size={18} className="text-green-400" />
               <span className="font-semibold text-white">
-                shranarspice.com
+                info@shranarspices.com
               </span>
-            </div>
+            </a>
           </div>
-
         </div>
 
         {/* LINK GRID */}
@@ -54,9 +59,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3">Quick Links</h3>
             <ul className="space-y-2 opacity-80">
-              <li className="hover:text-green-400 cursor-pointer">Home</li>
-              <li className="hover:text-green-400 cursor-pointer">About Us</li>
-              <li className="hover:text-green-400 cursor-pointer">Contact Us</li>
+              <li>
+                <Link href="/" className="hover:text-green-400 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-green-400 transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-green-400 transition">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -74,9 +91,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3">Products</h3>
             <ul className="space-y-2 opacity-80">
-              <li>Whole Spices</li>
-              <li>Masala Blends</li>
-              <li>Private Labeling</li>
+              <li>
+                <Link href="/products/whole-spices" className="hover:text-green-400 transition">
+                  Whole Spices
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/blended-spices" className="hover:text-green-400 transition">
+                  Masala Blends
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/dehydrated-masala" className="hover:text-green-400 transition">
+                  Dehydrated Masala
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -84,9 +113,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3">About</h3>
             <ul className="space-y-2 opacity-80">
-              <li>Company Overview</li>
-              <li>Our Team</li>
-              <li>Careers</li>
+              <li>
+                <Link href="/about" className="hover:text-green-400 transition">
+                  Company Overview
+                </Link>
+              </li>
+              <li>
+                <Link href="/about#team" className="hover:text-green-400 transition">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="hover:text-green-400 transition">
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -103,7 +144,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* BOTTOM BAR */}
@@ -112,19 +152,49 @@ export default function Footer() {
           <p>© 2025 Shranar Spices. All Rights Reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <span className="hover:text-green-400 cursor-pointer">Enquiry</span>
-            <span className="hover:text-green-400 cursor-pointer">Disclaimer</span>
-            <span className="hover:text-green-400 cursor-pointer">Terms</span>
-            <span className="hover:text-green-400 cursor-pointer">Privacy</span>
+            <Link href="/contact" className="hover:text-green-400 transition">
+              Enquiry
+            </Link>
+            <Link href="/disclaimer" className="hover:text-green-400 transition">
+              Disclaimer
+            </Link>
+            <Link href="/terms" className="hover:text-green-400 transition">
+              Terms
+            </Link>
+            <Link href="/privacy-policy" className="hover:text-green-400 transition">
+              Privacy
+            </Link>
           </div>
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-4">
-            <Instagram size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
-            <Facebook size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
-            <MessageCircle size={18} className="text-green-400 hover:scale-110 transition cursor-pointer" />
-          </div>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} className="text-green-400 hover:scale-110 transition" />
+            </a>
 
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <Facebook size={18} className="text-green-400 hover:scale-110 transition" />
+            </a>
+
+            <a
+              href="https://wa.me/918928329091"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={18} className="text-green-400 hover:scale-110 transition" />
+            </a>
+          </div>
         </div>
 
       </div>

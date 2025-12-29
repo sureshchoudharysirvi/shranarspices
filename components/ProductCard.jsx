@@ -1,44 +1,43 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ title, description, image, bg }) {
   return (
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      className="bg-white shadow-md rounded-xl p-4 border border-amber-100 w-full"
+    <div
+      className={`group relative rounded-3xl p-10 text-center shadow-md 
+      transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl ${bg}`}
     >
-      {/* Product Image */}
-      <div className="w-full overflow-hidden rounded-lg">
+      {/* IMAGE */}
+      <div
+        className="relative mx-auto w-56 h-56 rounded-full overflow-hidden
+        ring-8 ring-white shadow-2xl
+        transition-transform duration-500 group-hover:scale-105"
+      >
         <Image
-          src={product.image}
-          width={300}
-          height={200}
-          className="w-full h-auto object-cover rounded-lg"
-          alt={product.name}
-          priority={false}
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 
-      {/* Product Name */}
-      <h3 className="mt-4 text-xl font-bold text-amber-900">
-        {product.name}
+      {/* CONTENT */}
+      <h3 className="mt-8 text-2xl font-bold text-gray-900">
+        {title}
       </h3>
 
-      {/* Short Description */}
-      <p className="text-amber-700 text-sm mt-1 line-clamp-2 min-h-40px">
-        {product.description}
+      <p className="mt-4 text-gray-600 leading-relaxed text-sm">
+        {description}
       </p>
 
-      {/* CTA Button */}
-      <Link href={`/products/${product.slug}`} className="block">
-        <button className="mt-4 w-full py-2 bg-amber-700 hover:bg-amber-800 text-white rounded-lg text-sm sm:text-base font-medium transition">
-          View Details
-        </button>
-      </Link>
-    </motion.div>
-  );
+      {/* HOVER OVERLAY */}
+      <div
+        className="absolute inset-0 rounded-3xl opacity-0 
+        group-hover:opacity-100 transition duration-500 
+        bg-gradient-to-br from-white/30 to-transparent pointer-events-none"
+      />
+    </div>
+  )
 }

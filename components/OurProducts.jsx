@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
-// Product data
 // Product data (ONLY dropdown items)
 const products = [
   {
@@ -11,18 +11,21 @@ const products = [
     title: "Whole Spices",
     desc: "Premium quality whole spices sourced directly from Indian farms.",
     image: "/images/products/wholespice.jpg",
+    href: "/products/whole-spices",
   },
   {
     id: 2,
     title: "Blended Spices",
     desc: "Authentic blended spices crafted for consistent taste and aroma.",
     image: "/images/products/Spice blend.jpg",
+    href: "/products/blended-spices",
   },
   {
     id: 3,
     title: "Dehydrated Masala",
     desc: "Carefully dehydrated masala products with long shelf life and rich flavor.",
     image: "/images/products/dehydratedspice.jpg",
+    href: "/products/dehydrated-masala",
   },
 ]
 
@@ -86,27 +89,31 @@ export default function OurProducts() {
               key={product.id}
               variants={fadeUpVariant}
               whileHover={{ y: -8 }}
-              className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all p-5"
             >
-              {/* IMAGE */}
-              <div className="relative w-full h-[170px] sm:h-[190px] md:h-[210px] rounded-xl overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
-                  sizes="(max-width: 640px) 90vw, 33vw"
-                />
-              </div>
+              <Link
+                href={product.href}
+                className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all p-5 h-full"
+              >
+                {/* IMAGE */}
+                <div className="relative w-full h-[170px] sm:h-[190px] md:h-[210px] rounded-xl overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
+                    sizes="(max-width: 640px) 90vw, 33vw"
+                  />
+                </div>
 
-              {/* TEXT */}
-              <h3 className="mt-5 text-lg sm:text-xl font-bold text-orange-700 text-center">
-                {product.title}
-              </h3>
+                {/* TEXT */}
+                <h3 className="mt-5 text-lg sm:text-xl font-bold text-orange-700 text-center">
+                  {product.title}
+                </h3>
 
-              <p className="mt-2 text-sm sm:text-base text-gray-600 text-center">
-                {product.desc}
-              </p>
+                <p className="mt-2 text-sm sm:text-base text-gray-600 text-center">
+                  {product.desc}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
