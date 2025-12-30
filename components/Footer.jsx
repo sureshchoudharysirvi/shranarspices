@@ -138,7 +138,8 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-green-400 mt-1" />
                 <span>
-                  Churchgate, Mumbai <br />
+                 1 D 101 Chakradhar Nagar Mahalaxmi Complex Palghar,<br/>
+                  Vasai Virar-401203 <br />
                   Maharashtra – 400020
                 </span>
               </div>
