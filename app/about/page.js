@@ -57,7 +57,7 @@ export default function AboutPage() {
               Get Bulk Pricing Quote
             </a>
             <a
-              href="/catalogue.pdf"
+              href="/catalog.pdf"
               className="border border-yellow-900 text-yellow-900 px-6 py-3 rounded-2xl hover:bg-yellow-50 transition"
             >
               Download Product Catalogue

@@ -170,7 +170,7 @@ export default function Footer() {
           {/* SOCIAL ICONS */}
           <div className="flex gap-4">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/shranarspicespvtltd/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

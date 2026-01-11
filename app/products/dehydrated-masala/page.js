@@ -18,7 +18,7 @@ export default function DehydratedMasalaPage() {
             title: "Dehydrated Onion Flakes / Kibbled",
             description:
               "Premium dehydrated white, red and pink onion flakes processed under hygienic conditions. Ideal for soups, sauces, instant foods and seasoning blends.",
-            image: "/images/products/dehydrated/Dehydrated Onion Flakes.png",
+            image: "/images/products/dehydrated/o1.png",
             bg: "bg-[#FFF7E6]",
           },
           {
@@ -32,7 +32,7 @@ export default function DehydratedMasalaPage() {
             title: "Dehydrated Onion Minced",
             description:
               "Finely minced dehydrated onions widely used in ready-to-cook meals, gravies and food processing industries.",
-            image: "/products/onion-minced.jpg",
+            image: "/images/products/dehydrated/onion3.png",
             bg: "bg-[#FFF0DA]",
           },
           {

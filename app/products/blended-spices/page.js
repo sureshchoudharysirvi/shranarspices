@@ -12,20 +12,20 @@ export default function BlendedSpicesPage() {
       products={[
         {
           title: "Garam Masala",
-          description: "Balanced blend for rich Indian flavors.",
-          image: "/products/garam-masala.jpg",
+          description: "A rich aromatic spice blend that brings authentic Indian taste to every dish.",
+          image: "/images/products/blended/garam.png",
           bg: "bg-[#FFF4EC]",
         },
         {
           title: "Sambar Masala",
-          description: "Traditional South Indian spice blend.",
-          image: "/products/sambar.jpg",
+          description: "A traditional South Indian spice mix for flavorful and perfect sambar.",
+          image: "/images/products/blended/sambhar.png",
           bg: "bg-[#F0FFF4]",
         },
         {
           title: "Chaat Masala",
-          description: "Tangy blend perfect for snacks.",
-          image: "/products/chaat.jpg",
+          description: "A tangy and zesty seasoning that enhances snacks and street food.",
+          image: "/images/products/blended/chat.png",
           bg: "bg-[#F5F0FF]",
         },
       ]}
