@@ -79,41 +79,90 @@ export default function AboutPage() {
       </div>
 
       {/* OWNER SECTION */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="mt-20 text-center"
-      >
-        <motion.h2 variants={fadeUp} className="text-3xl font-semibold text-yellow-900">
-          Meet the Founder
-        </motion.h2>
-        <motion.p variants={fadeUp} className="mt-2 text-gray-600">
-          Driven by purity, quality, and long-term B2B partnerships
-        </motion.p>
+     {/* OWNER SECTION - IMPROVED */}
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="mt-24"
+>
+  <div className="bg-gradient-to-br from-yellow-50 to-white rounded-3xl shadow-xl border border-yellow-200 px-6 py-12 text-center">
 
-        <motion.div variants={fadeUp} className="mt-6 flex justify-center">
-          <Image
-            src="/packaging/businessman.jpg"
-            alt="Founder of Shranar Spices"
-            width={160}
-            height={160}
-            className="rounded-full border-4 border-yellow-900 shadow-lg object-cover"
-          />
-        </motion.div>
+    {/* Heading */}
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+      className="text-3xl sm:text-4xl font-bold text-yellow-900"
+    >
+      Meet the Founder
+    </motion.h2>
 
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 max-w-3xl mx-auto text-gray-700"
-        >
-          Founded with a vision to deliver unadulterated Indian spices,
-          <strong> Shranar Spices </strong>
-          specializes in B2B supply, ensuring consistent batches, competitive
-          wholesale pricing, hygienic processing, and business-grade packaging
-          for high-volume commercial and export demands.
-        </motion.p>
-      </motion.div>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.6 }}
+      className="mt-2 text-gray-600 text-lg"
+    >
+      Driven by purity, quality, and long-term B2B partnerships
+    </motion.p>
+
+    {/* Founder Image */}
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.6 }}
+      className="mt-8 flex justify-center"
+    >
+      <div className="relative">
+        <Image
+          src="/packaging/b.jpg"
+          alt="Founder Naresh Choudhary"
+          width={180}
+          height={180}
+          className="rounded-full border-4 border-yellow-900 shadow-2xl object-cover"
+        />
+        {/* Decorative Ring */}
+        <div className="absolute -inset-2 rounded-full border-2 border-yellow-300 opacity-40"></div>
+      </div>
+    </motion.div>
+
+    {/* Name */}
+    <motion.h3
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.6 }}
+      className="mt-5 text-xl font-semibold text-gray-800"
+    >
+      Naresh Choudhary
+    </motion.h3>
+
+    <motion.p
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 0.6 }}
+      className="text-sm text-gray-500"
+    >
+      Founder & Managing Director, Shranar Spices
+    </motion.p>
+
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.7, duration: 0.6 }}
+      className="mt-6 max-w-3xl mx-auto text-gray-700 leading-relaxed"
+    >
+      Founded with a vision to deliver unadulterated Indian spices,
+      <span className="font-semibold text-yellow-900"> Shranar Spices </span>
+      specializes in B2B supply, ensuring consistent batches, competitive
+      wholesale pricing, hygienic processing, and business-grade packaging
+      for high-volume commercial and export demands.
+    </motion.p>
+  </div>
+</motion.div>
+
 
       {/* WHO WE ARE */}
       <motion.div
