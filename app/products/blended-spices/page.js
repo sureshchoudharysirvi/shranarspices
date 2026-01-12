@@ -13,7 +13,7 @@ export default function BlendedSpicesPage() {
         {
           title: "Garam Masala",
           description: "A rich aromatic spice blend that brings authentic Indian taste to every dish.",
-          image: "/images/products/blended/garam.png",
+          image: "/images/products/blended/Garam.png",
           bg: "bg-[#FFF4EC]",
         },
         {
