@@ -46,7 +46,7 @@ export default function DehydratedMasalaPage() {
             title: "Dehydrated Onion Powder",
             description:
               "Finely ground onion powder delivering intense flavor, long shelf life and easy solubility for industrial use.",
-            image: "/products/onion-powder.jpg",
+            image: "/images/products/dehydrated/Dehydrated Onion Powder.png",
             bg: "bg-[#FFEED6]",
           },
         ]}
@@ -61,21 +61,21 @@ export default function DehydratedMasalaPage() {
             title: "Dehydrated Garlic Cloves / Flakes",
             description:
               "Naturally dehydrated garlic cloves and flakes with strong aroma and authentic taste, ideal for sauces and seasonings.",
-            image: "/products/garlic-flakes.jpg",
+            image: "/images/products/dehydrated/Dehydrated Garlic Cloves  Flakes.png",
             bg: "bg-[#F0F7FF]",
           },
           {
             title: "Dehydrated Garlic Chopped",
             description:
               "Chopped garlic offering excellent flavor retention and consistency for food manufacturers and bulk buyers.",
-            image: "/products/garlic-chopped.jpg",
+            image: "/images/products/dehydrated/Dehydrated Garlic Chopped.png",
             bg: "bg-[#EAF3FF]",
           },
           {
             title: "Dehydrated Garlic Minced",
             description:
               "Minced dehydrated garlic widely used in instant foods, marinades and spice blends.",
-            image: "/products/garlic-minced.jpg",
+            image: "/images/products/dehydrated/Dehydrated Garlic Minced.png",
             bg: "bg-[#EEF5FF]",
           },
           {
