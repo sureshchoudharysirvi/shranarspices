@@ -39,7 +39,7 @@ export default function DehydratedMasalaPage() {
             title: "Dehydrated Onion Granules",
             description:
               "Free-flowing onion granules with natural taste, suitable for spice blends, seasonings and snack applications.",
-            image: "/products/onion-granules.jpg",
+            image: "/images/products/dehydrated/Dehydrated Onion Granules.png",
             bg: "bg-[#FFF4E8]",
           },
           {
