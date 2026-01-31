@@ -4,11 +4,11 @@ import pool from "../../../lib/db"
 
 export async function POST(req) {
   try {
-    const { name, email, message } = await req.json()
+    const { name, email,  mobile, message } = await req.json()
 
     await pool.query(
-      "INSERT INTO contact (name, email, message) VALUES ($1, $2, $3)",
-      [name, email, message]
+      "INSERT INTO contact (name, email,mobile, message) VALUES ($1, $2, $3, $4)",
+      [name, email,mobile, message]
     )
 
     return Response.json({ success: true }, { status: 200 })

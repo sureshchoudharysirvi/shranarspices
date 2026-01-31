@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" })
+  const [form, setForm] = useState({ name: "", email: "",  mobile: "", message: "" })
   const [status, setStatus] = useState(null)
 
   function onChange(e) {
@@ -22,7 +22,7 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus("success")
-        setForm({ name: "", email: "", message: "" })
+        setForm({ name: "", email: "",  mobile: "", message: "" })
       } else {
         setStatus("error")
       }
@@ -63,6 +63,21 @@ export default function ContactForm() {
             required
           />
         </div>
+<div className="mb-4">
+  <label className="block text-sm font-semibold text-yellow-900 mb-1">
+    Mobile Number
+  </label>
+  <input
+    type="tel"
+    name="mobile"
+    value={form.mobile}
+    onChange={onChange}
+    pattern="[0-9]{10}"
+    placeholder="10 digit mobile number"
+    className="w-full border border-yellow-800/30 px-3 py-2 rounded-lg focus:outline-yellow-800 font-serif"
+    required
+  />
+</div>
 
         <div className="mb-5">
           <label className="block text-sm font-semibold text-yellow-900 mb-1">Message</label>
