@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
+    <h1> welcome to git hub </h1>
       </body>
     </html>
   )
